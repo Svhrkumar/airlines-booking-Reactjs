@@ -1,27 +1,23 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import AdminFlightCard from '../Components/AdminFlightCard';
-import FullWidthTabs from '../Components/Tabnav';
 import '../Components/cards.css';
 import '../Components/accordian.css';
-import Accordian from '../Components/Accordian';
+
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import TextField from '@mui/material/TextField';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { TimePicker } from '@mui/x-date-pickers/TimePicker';
-import { useDispatch, useSelector } from 'react-redux';
+
+import { useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const AdminDashboard = () => {
 	const [fetchedData, setFetchedData] = useState();
 	const [refresh, setRefresh] = useState(false);
 	const [edit, setEdit] = useState(false);
-	const [updateId, setUpdateId] = useState();
+
 	const [airportsList, setAirportsList] = useState([]);
-	const [airportNameOriginList, setAirportNameOriginList] = useState([]);
-	const [airportNameDestList, setAirportNameDestList] = useState([]);
+	// const [airportNameOriginList, setAirportNameOriginList] = useState([]);
+	// const [airportNameDestList, setAirportNameDestList] = useState([]);
 	const [airlinesList, setAirlinesList] = useState([]);
 	const flightData = useSelector((state) => state.flightData);
 
@@ -63,9 +59,9 @@ const AdminDashboard = () => {
 		flightCarrerReq,
 		OriginCityReq,
 		flightCodeReq,
-		OrigAirportNameReq,
+
 		DestinationCityReq,
-		DestAirportNameReq,
+
 		DepartureDateReq,
 		DepartureTimeReq,
 		ArrivalDateReq,
@@ -88,7 +84,6 @@ const AdminDashboard = () => {
 		ImageUrl,
 		Price,
 		seats,
-		block,
 	} = flightDetails;
 	console.log('check airlines', ImageUrl);
 
@@ -111,19 +106,19 @@ const AdminDashboard = () => {
 			seatsReq: false,
 		});
 		if (
-			flightCarrer != '' &&
-			OriginCity != '' &&
-			flightCode != '' &&
-			OrigAirportName != '' &&
-			DestinationCity != '' &&
-			DestAirportName != '' &&
-			DepartureDate != '' &&
-			DepartureTime != '' &&
-			ArrivalDate != '' &&
-			ArrivalTime != '' &&
-			ImageUrl != '' &&
-			Price != '' &&
-			seats != ''
+			flightCarrer !== '' &&
+			OriginCity !== '' &&
+			flightCode !== '' &&
+			OrigAirportName !== '' &&
+			DestinationCity !== '' &&
+			DestAirportName !== '' &&
+			DepartureDate !== '' &&
+			DepartureTime !== '' &&
+			ArrivalDate !== '' &&
+			ArrivalTime !== '' &&
+			ImageUrl !== '' &&
+			Price !== '' &&
+			seats !== ''
 		) {
 			await axios
 				.post(
@@ -182,19 +177,19 @@ const AdminDashboard = () => {
 			});
 		} else {
 			if (
-				flightCarrer == '' &&
-				OriginCity == '' &&
-				flightCode == '' &&
-				OrigAirportName == '' &&
-				DestinationCity == '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer === '' &&
+				OriginCity === '' &&
+				flightCode === '' &&
+				OrigAirportName === '' &&
+				DestinationCity === '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: true,
@@ -213,19 +208,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity == '' &&
-				flightCode == '' &&
-				OrigAirportName == '' &&
-				DestinationCity == '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity === '' &&
+				flightCode === '' &&
+				OrigAirportName === '' &&
+				DestinationCity === '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -244,19 +239,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode == '' &&
-				OrigAirportName == '' &&
-				DestinationCity == '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode === '' &&
+				OrigAirportName === '' &&
+				DestinationCity === '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -275,19 +270,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName == '' &&
-				DestinationCity == '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName === '' &&
+				DestinationCity === '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -306,19 +301,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity == '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity === '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -337,19 +332,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -368,19 +363,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity == '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity === '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -399,19 +394,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName == '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName === '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -430,19 +425,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate == '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate === '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -461,19 +456,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime == '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime === '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -492,19 +487,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime != '' &&
-				ArrivalDate == '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime !== '' &&
+				ArrivalDate === '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -523,19 +518,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime != '' &&
-				ArrivalDate != '' &&
-				ArrivalTime == '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime !== '' &&
+				ArrivalDate !== '' &&
+				ArrivalTime === '' &&
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -554,19 +549,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime != '' &&
-				ArrivalDate != '' &&
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime !== '' &&
+				ArrivalDate !== '' &&
 				ArrivalTime !== '' &&
-				ImageUrl == '' &&
-				Price == '' &&
-				seats == ''
+				ImageUrl === '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -585,19 +580,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime != '' &&
-				ArrivalDate != '' &&
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime !== '' &&
+				ArrivalDate !== '' &&
 				ArrivalTime !== '' &&
-				ImageUrl != '' &&
-				Price == '' &&
-				seats == ''
+				ImageUrl !== '' &&
+				Price === '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -616,19 +611,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime != '' &&
-				ArrivalDate != '' &&
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime !== '' &&
+				ArrivalDate !== '' &&
 				ArrivalTime !== '' &&
-				ImageUrl != '' &&
-				Price != '' &&
-				seats == ''
+				ImageUrl !== '' &&
+				Price !== '' &&
+				seats === ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -647,19 +642,19 @@ const AdminDashboard = () => {
 				});
 			}
 			if (
-				flightCarrer != '' &&
-				OriginCity != '' &&
-				flightCode != '' &&
-				OrigAirportName != '' &&
-				DestinationCity != '' &&
-				DestAirportName != '' &&
-				DepartureDate != '' &&
-				DepartureTime != '' &&
-				ArrivalDate != '' &&
+				flightCarrer !== '' &&
+				OriginCity !== '' &&
+				flightCode !== '' &&
+				OrigAirportName !== '' &&
+				DestinationCity !== '' &&
+				DestAirportName !== '' &&
+				DepartureDate !== '' &&
+				DepartureTime !== '' &&
+				ArrivalDate !== '' &&
 				ArrivalTime !== '' &&
-				ImageUrl != '' &&
-				Price != '' &&
-				seats != ''
+				ImageUrl !== '' &&
+				Price !== '' &&
+				seats !== ''
 			) {
 				setErrors({
 					flightCarrerReq: false,
@@ -861,7 +856,7 @@ const AdminDashboard = () => {
 				DestinAirportName.airport_name
 			);
 		}
-	}, [OriginCity, DestinationCity]);
+	}, [OriginCity, DestinationCity, airportsList, flightDetails]);
 
 	const [viewDetails, setViewDetails] = useState(false);
 	const handleDetailsTab = () => {
