@@ -1,0 +1,27 @@
+ 
+   
+.nav-bar {
+    color: whitesmoke;
+    background-color: #0039a6;
+}
+.nav-link {
+    color: whitesmoke !important;
+}
+.nav-list-Dropdown{
+    float: right;
+}
+.navbar-brand{
+    color: white !important;
+}
+.container-lists{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-contrls{
+    flex-direction: row-reverse !important;
+ 
+}
+.navbar-nav{
+    margin: 5px;
+}
+

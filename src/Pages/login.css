@@ -1,0 +1,73 @@
+.inner-container {
+    display: flex;
+    margin: 5px auto;
+    justify-content: center;
+    position: relative;
+    height: 280px;
+    background-color: #f0f8ff;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    padding: 0px 10px;
+    width: 325px;
+   
+}
+.outer-conatiner {
+    padding: 40px 50px;
+    width: 100%;
+}
+.input-field {
+    border-radius: 99px;
+    width: 100%;
+}
+.submit-btn {
+    color: white;
+    padding: 5px 10px;
+    margin: 10px 15px;
+    width: 100px;
+    border-radius: 99px;
+    border: 1px solid white;
+    background-color: #0039a6;
+}
+.signin-btn {
+    padding: 10px 25px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #0039a6;
+    background-color: #f0f8ff;
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    max-width: 250px;
+    text-decoration: none;
+}
+.signup-btn {
+    padding: 10px 25px;
+    height: 40px;
+    max-width: 250px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #0039a6;
+    background-color: #f0f8ff;
+    border: none;
+    border-radius: 7px;
+ 
+    text-decoration: none;
+}
+.signin-tab :hover {
+    background-color: #769b9b;
+}
+.innerbg{
+    background-image: url("/src/image/8489.jpg");
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+   
+}
+@media screen and (max-width: 480px) {
+    .inner-container {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,49 @@
+.check-box{
+    margin: 5px 10px;
+}
+.radio-btn-container{
+    display: flex;
+}
+.btn-primary-clr{
+    background-color: #0039a6;
+    border: transparent;
+    color: white;
+    border-radius: 9px;
+    padding: 5px 10px;
+}
+/* .form-outer-ctns{
+    width: 98% !important;
+} */
+.form-ctn{
+    padding: 30px 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
+   
+}
+.field-ctn{
+    margin-right: 10px;
+ 
+}
+.srch-form-ctn{
+   
+}
+.bg-img{
+width: 100%;
+height: auto;
+z-index: 2;
+}
+ 
+ 
+.cards-outer-ctn{
+    background-color: aliceblue;
+ 
+  /* width: 98% !important; */
+ 
+ 
+    padding: 40px 30px;
+    display: grid;
+    place-items:center;
+ 
+}
+ 
+

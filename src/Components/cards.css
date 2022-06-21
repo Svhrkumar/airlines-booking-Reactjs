@@ -1,0 +1,134 @@
+.cards-ctn{
+    background-color: white;
+    color: grey;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px 30px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    align-items: center;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+ 
+ 
+}
+.card-details-btn{
+    cursor: pointer;
+    color: #0039a6;
+}
+.card-sub-ctn{
+    background-color: white;
+  margin-top: 10px;
+    padding: 10px 30px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.card-sub-ctn-row{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    padding: 0px 30px;
+ 
+}
+ 
+.card-details-ctn{
+    padding: 10px 120px;
+}
+.card-content{
+    margin:  5px 20px;
+}
+.card-btn{
+    cursor: pointer;
+    color: white;
+    background-color: #0039a6;
+    border: transparent;
+    border-radius: 9px;
+    padding: 5px 10px;
+    margin: 5px 15px;
+}
+.card-btn-ctn{
+    padding: 10px 30px;
+}
+.card-ctn-col{
+    margin:  10px 40px;
+}
+.card-ctn-line{
+    background-color: gray;
+    width: 20%;
+    height: 2px;
+}
+ 
+.card-booking-ctn{
+    padding:15px 30px;
+}
+hr {
+    margin:"0px "!important
+}
+.add-btn{
+    background-color:#0039a6 ;
+    padding: 4px;
+    border: transparent;
+    border-radius: 9px;
+width: 50px;
+    color: white;
+    margin: 0px 10px;
+}
+.add-reset-btn{
+    background-color:#0039a6 ;
+ 
+    border: transparent;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color: white;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+ 
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+ 
+  tr:nth-child(even) {
+    background-color: aliceblue;
+  }
+  .card-seat-ctn{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+  .airbus-seat-layout{
+      width: 800px;
+      height: 350px;
+  }
+  .card-check-btn-ctn{
+      display: flex;
+     flex-direction: row-reverse;
+      margin: 10px 50px;
+      justify-content: space-between;
+  }
+  .card-bg-ctn{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 20px 30px;
+ 
+  }
+  .card-bg-ctn-col{
+      display: flex;
+      flex-direction: column;
+  }
+ .card-bg-ctn-sub-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+ }
+

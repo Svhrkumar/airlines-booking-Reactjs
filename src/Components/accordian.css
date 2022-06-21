@@ -1,0 +1,43 @@
+.accordian-ctn {
+ 
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9px;
+    padding: 20px 40px;
+    margin: 10px 40px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    cursor: pointer;
+    color: #0039a6
+  }
+   
+  .accordian-card {
+   
+    margin: 10px 0px;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 9px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   
+  }
+  .card-details-btn{
+    cursor: pointer;
+    color: #0039a6;
+  }
+  .accordian-card-innr-ctn{
+   
+    padding: 20px 30px;
+   
+  }
+  .accordian-innr-sub-card{
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+   
+  }
+   
+   
+   
+  
+  

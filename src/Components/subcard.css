@@ -1,0 +1,22 @@
+.subcard-ctn{
+    background-color: white;
+    color: grey;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px 15px;
+    margin-bottom: 10px;
+    border-radius: 9px;
+    align-items: center;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+.subcards-outer-ctn{
+    background-color: aliceblue;
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
