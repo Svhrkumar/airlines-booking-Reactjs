@@ -5,8 +5,7 @@ import './accordian.css';
 import moment from 'moment';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Modal from './Modal';
-import { useDispatch } from 'react-redux';
-import { SELECTED_FLIGHT_SUCCESS } from '../Redux/types';
+// import { useDispatch } from 'react-redux';
 
 const AdminFlightCard = ({
 	fetchedData,
@@ -14,9 +13,9 @@ const AdminFlightCard = ({
 	blockHandler,
 	deleteHandler,
 }) => {
-	const [updateId, setUpdateId] = useState();
+	// const [updateId, setUpdateId] = useState();
 	const [viewDetails, setViewDetails] = useState(false);
-	const [totalSeatCount, setTotalSeatCount] = useState(0);
+	// const [totalSeatCount, setTotalSeatCount] = useState(0);
 	const [passengerList, setPassengerList] = useState([]);
 	const [dataList, setDataList] = useState([]);
 	const [flightDetails, setFlightDetails] = useState({
@@ -34,7 +33,7 @@ const AdminFlightCard = ({
 		Price: '',
 		block: false,
 	});
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 	// useEffect(() => {
 
 	//  },[fetchedData._id])
@@ -75,7 +74,7 @@ const AdminFlightCard = ({
 			block: false,
 		});
 
-		setUpdateId('');
+		// setUpdateId('');
 	};
 
 	const handleCard = () => {
@@ -85,11 +84,11 @@ const AdminFlightCard = ({
 			setViewDetails(false);
 		}
 	};
-	const { seats, bookedSeats } = fetchedData;
+	// const { seats, bookedSeats } = fetchedData;
 
-	useEffect(() => {
-		setTotalSeatCount(135 - (seats + bookedSeats));
-	}, [fetchedData]);
+	// useEffect(() => {
+	// 	setTotalSeatCount(135 - (seats + bookedSeats));
+	// }, [fetchedData]);
 
 	// useEffect(
 	//   () => {
@@ -103,12 +102,12 @@ const AdminFlightCard = ({
 	useEffect(() => {
 		const listData =
 			dataList &&
-			dataList.filter((ele) => ele.flightCode == fetchedData.flightCode);
+			dataList.filter((ele) => ele.flightCode === fetchedData.flightCode);
 
 		const passList = listData.map((data) => data.bookedPassengers);
 		const mergeArr = [].concat.apply([], passList);
 		setPassengerList(mergeArr);
-	}, [dataList]);
+	}, [dataList, fetchedData]);
 
 	console.log('-------------array------------', passengerList);
 
@@ -117,7 +116,12 @@ const AdminFlightCard = ({
 			<div
 				className='cards-ctn'
 				style={{ backgroundColor: 'aliceblue', margin: '10px auto' }}>
-				<img src={fetchedData.ImageUrl} width='60px' height='20px' />
+				<img
+					src={fetchedData.ImageUrl}
+					width='60px'
+					height='20px'
+					alt={fetchedData.flightCarrer}
+				/>
 				<span>{fetchedData.flightCarrer}</span>
 				<span style={{ width: '40%' }}>
 					<b>
