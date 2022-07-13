@@ -9,7 +9,7 @@ import noFlightFound from '../image/attachment.png';
 import bg from '../image/8489.jpg';
 import { useFormik } from 'formik';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
-import { getAiportList, getFlightslist } from '../Redux/actions/apiActions';
+import { getAirportsList, getFlightslist } from '../Redux/actions/apiActions';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment';
@@ -21,7 +21,7 @@ const Home = () => {
 	const [filteredData, setFilteredData] = useState();
 	const [search, setSearch] = useState(false);
 	const [sameInputs, setSameInputs] = useState(false);
-	const [airportsList, setAirportsList] = useState([]);
+	// const [airportsList, setAirportsList] = useState([]);
 	const [requiredDepart, setRequiredDepart] = useState(false);
 	const [requiredGoing, setRequiredGoing] = useState(false);
 	const [requiredDates, setRequiredDates] = useState(false);
@@ -38,6 +38,7 @@ const Home = () => {
 	const dispatch = useDispatch();
 	const flightData = useSelector((state) => state.flightData);
 	const airportData = useSelector((state) => state.airportData);
+	const { airportsList } = airportData;
 	console.log('----flights----', flightData, airportData);
 
 	console.log(
@@ -166,16 +167,17 @@ const Home = () => {
 
 	useEffect(() => {
 		dispatch(getFlightslist());
+		dispatch(getAirportsList());
+		// axios
+		// 	.get('https://airline-bookings-nodejs.herokuapp.com/api/v1/airports')
+		// 	.then((res) => {
+		// 		console.log(res);
 
-		axios
-			.get('https://airline-bookings-nodejs.herokuapp.com/api/v1/airports')
-			.then((res) => {
-				console.log(res);
-				setAirportsList(res.data);
-			})
-			.catch((err) => {
-				console.log(err);
-			});
+		// 		setAirportsList(res.data);
+		// 	})
+		// 	.catch((err) => {
+		// 		console.log(err);
+		// 	});
 	}, []);
 
 	useEffect(() => {

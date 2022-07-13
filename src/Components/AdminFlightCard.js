@@ -1,12 +1,13 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import './cards.css';
 import './accordian.css';
 import moment from 'moment';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Modal from './Modal';
+// import Table from './Table';
 // import { useDispatch } from 'react-redux';
-
+const Table = React.lazy(() => import('./Table'));
 const AdminFlightCard = ({
 	fetchedData,
 	unBlockHandler,
@@ -201,33 +202,9 @@ const AdminFlightCard = ({
 
 							<h5>Passengers List</h5>
 							<hr />
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Gender</th>
-										<th>Age</th>
-										<th>Seat No</th>
-										<th>Ordered Meal</th>
-									</tr>
-								</thead>
-								<tbody>
-									{passengerList &&
-										passengerList
-											.sort((a, b) => a.age - b.age)
-											.map((data, id) => {
-												return (
-													<tr>
-														<td>{data.name}</td>
-														<td>{data.gender}</td>
-														<td>{data.age}</td>
-														<td>{data.seatNo}</td>
-														<td>{data.mealType}</td>
-													</tr>
-												);
-											})}
-								</tbody>
-							</table>
+							<Suspense fallback={<div>Loading....</div>}>
+								<Table passengerList={passengerList} />
+							</Suspense>
 						</div>
 					</div>
 				</>

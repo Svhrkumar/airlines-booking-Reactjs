@@ -66,3 +66,19 @@ export const cancelTicketHandler = (data) => (dispatch) => {
 			console.log('error----', err);
 		});
 };
+
+export const getAirportsList = () => (dispatch) => {
+	axios
+		.get('https://airline-bookings-nodejs.herokuapp.com/api/v1/airports')
+		.then((res) => {
+			console.log(res);
+
+			dispatch({
+				type: GET_AIRPORTS_LIST,
+				payload: res.data,
+			});
+		})
+		.catch((err) => {
+			console.log(err);
+		});
+};

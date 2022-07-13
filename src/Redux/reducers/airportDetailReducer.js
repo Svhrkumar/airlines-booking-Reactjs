@@ -1,7 +1,7 @@
 import { GET_AIRPORTS_LIST } from '../types';
 
 export const airportsDetailsReducer = (
-	state = { airportsList: {} },
+	state = { airportsList: [] },
 	action
 ) => {
 	switch (action.type) {
